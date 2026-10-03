@@ -1,5 +1,51 @@
-import React from 'react';
-import {Link} from 'react-router-dom';
-import {FileText,ArrowRight,Plus} from 'lucide-react';
-import Topics from '../components/Topics';
-export default function Notes(){return <main id="main" tabIndex={-1} className="container page"><div className="page-heading"><div className="eyebrow"><FileText size={16}/>The reference shelf</div><h1>Small notes.<br/>Useful understanding<span className="accent">.</span></h1><p>Short references, useful commands, and observations from the lab. Organised around the questions they help answer.</p></div><section className="empty-notes"><div className="empty-doodle" aria-hidden="true"><FileText size={58} strokeWidth={1}/><Plus size={22}/></div><div><div className="eyebrow muted">0 notes / a fresh start</div><h2>The next page is still blank.</h2><p>The notes collection is intentionally empty for now. Start with the learning journal or the detailed article on secure delivery.</p><Link className="text-link" to="/articles/">Read the first article <ArrowRight size={18}/></Link></div></section><section className="notes-topics"><div className="section-heading"><div><div className="eyebrow muted">On the horizon</div><h2>Topics to explore.</h2></div></div><Topics/></section></main>;}
+import React from "react";
+import { Link } from "react-router-dom";
+import { FileText, ArrowRight, Plus } from "lucide-react";
+import Topics from "../components/Topics";
+export default function Notes() {
+  return (
+    <main id="main" tabIndex={-1} className="container page">
+      <div className="page-heading">
+        <div className="eyebrow">
+          <FileText size={16} />
+          The reference shelf
+        </div>
+        <h1>
+          Small notes.
+          <br />
+          Useful understanding<span className="accent">.</span>
+        </h1>
+        <p>
+          Short references, useful commands, and observations from the lab.
+          Organised around the questions they help answer.
+        </p>
+      </div>
+      <section className="empty-notes">
+        <div className="empty-doodle" aria-hidden="true">
+          <FileText size={58} strokeWidth={1} />
+          <Plus size={22} />
+        </div>
+        <div>
+          <div className="eyebrow muted">0 notes / a fresh start</div>
+          <h2>The next page is still blank.</h2>
+          <p>
+            The notes collection is intentionally empty for now. Start with the
+            learning journal or the detailed article on secure delivery.
+          </p>
+          <Link className="text-link" to="/articles/">
+            Read the first article <ArrowRight size={18} />
+          </Link>
+        </div>
+      </section>
+      <section className="notes-topics">
+        <div className="section-heading">
+          <div>
+            <div className="eyebrow muted">On the horizon</div>
+            <h2>Topics to explore.</h2>
+          </div>
+        </div>
+        <Topics />
+      </section>
+    </main>
+  );
+}

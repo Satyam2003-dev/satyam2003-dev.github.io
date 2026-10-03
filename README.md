@@ -30,11 +30,11 @@ The production build prerenders every route as HTML, then hydrates it with React
 - `src/styles/site.css`: shared design tokens and responsive dark/white styles.
 - `content/catalog.json`: post metadata and source references.
 - `content/*.html`: trusted, repository-owned article bodies.
-- `scripts/prepare-content.mjs`: validates and generates article sections, word counts, and reading times.
+- `scripts/prepare-content.mjs`: validates and generates lightweight metadata plus separate article bodies, word counts, and reading times.
 - `scripts/build.mjs`: Vite client/server builds, prerendering, sitemap, and robots file.
 - `scripts/check.mjs`: validates routes, local assets, anchors, metadata, authors, and content minimums.
 
-React, React Router, and Motion provide component composition, navigation, and animation. Motion honours reduced-motion preferences. Fonts and artwork are hosted locally. There are no analytics or external rendering dependencies.
+React, React Router, and Motion provide component composition, navigation, and animation. Motion honours reduced-motion preferences. Article bodies load separately on demand, while the full content is prerendered for direct visits. Header search indexes titles, descriptions, topics, and pages, with a native modal and keyboard controls. Dark is the default theme; an explicit choice is remembered. The mountain hero stays at full strength in both themes. Fonts and artwork are hosted locally. There are no analytics or external rendering dependencies.
 
 The initial collection contains exactly **one blog and one technical article**, each over 4,000 body words. Notes are empty. To add writing, add a catalog record and a body file using unique `<section id="..."><h2>...</h2>...</section>` sections. The generator and prerenderer discover posts from the catalog. The current minimum-word and collection-count checks encode this initial brief; change those deliberately as the publication grows. Only trusted local content is rendered as HTML.
 
@@ -54,6 +54,6 @@ Fonts: IBM Plex Sans, JetBrains Mono, and Caveat; OFL licenses accompany the loc
 
 ## GitHub Pages / CI/CD
 
-Pull requests build and validate. Pushes to `main` build, validate, upload `dist/`, and deploy through GitHub Pages. Actions are pinned to commit SHAs; Pages and OIDC permissions are scoped to the deployment job. No personal tokens or cloud credentials are stored in the repository.
+Pull requests build and validate. Pushes to `main` build, validate, upload `dist/`, and deploy through GitHub Pages. The jobs use Ubuntu 24.04 and Actions with Node 24 runtimes. Actions are pinned to commit SHAs; Pages and OIDC permissions are scoped to the deployment job. No personal tokens or cloud credentials are stored in the repository.
 
 Repository: `Satyam2003-dev/satyam2003-dev.github.io`. Pages source: **GitHub Actions**. The root URL requires no repository base-path prefix. Every successful push to `main` deploys automatically.

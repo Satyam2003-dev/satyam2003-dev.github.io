@@ -5,10 +5,7 @@
     "title": "From security labs to DevSecOps: a notebook begins",
     "description": "Connecting hands-on TryHackMe practice, cloud security, and the next chapter in AI & cybersecurity.",
     "date": "2026-10-03",
-    "tags": [
-      "TryHackMe",
-      "DevSecOps"
-    ],
+    "tags": ["TryHackMe", "DevSecOps"],
     "sources": [
       {
         "title": "TryHackMe · cyberhitman",
@@ -33,10 +30,7 @@
     "title": "A security checklist for a CI/CD pipeline",
     "description": "Start with permissions, dependencies, credentials, and the boundary between untrusted code and deployment.",
     "date": "2026-10-03",
-    "tags": [
-      "CI/CD",
-      "Cloud security"
-    ],
+    "tags": ["CI/CD", "Cloud security"],
     "sources": [
       {
         "title": "TryHackMe · Introduction to DevSecOps",
