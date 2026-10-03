@@ -1,0 +1,8 @@
+node_modules/
+dist/
+tmp/
+output/
+reference/
+*.zip
+Satyam_Resume.pdf
+.DS_Store
