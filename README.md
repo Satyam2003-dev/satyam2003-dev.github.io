@@ -1,28 +1,46 @@
-# sec.notes
+# sec.notes — Satyam Kumar
 
-Satyam Kumar’s cybersecurity notebook, authored as **satyam2003-dev**. Built from the supplied Cybersecurity Study Site Design: dark surfaces, mint accents, IBM Plex Sans body text, and JetBrains Mono display/terminal text.
+A cybersecurity portfolio and growing public notebook, authored as **satyam2003-dev**.
 
-Live URL: https://satyam2003-dev.github.io/Sec-Notes/
+Live: https://satyam2003-dev.github.io/
 
-## Local preview
+## Develop and validate
 
-Requires Node.js 22 or later; no runtime dependencies.
+Requires Node.js 22.12 or later.
 
 ```sh
 npm ci
 npm run dev
 ```
 
-Open http://127.0.0.1:5187/Sec-Notes/. After edits, rebuild with `npm run build` and refresh the page. Set `PORT` if another preview port is needed.
+Open http://127.0.0.1:5188/. Vite refreshes changes automatically.
 
 ```sh
 npm run build
 npm run check
+npm run preview
 ```
 
-## Content
+The production build prerenders every route as HTML, then hydrates it with React. Direct article URLs work on GitHub Pages, and the writing remains readable without JavaScript. `dist/` is generated and is not committed.
 
-The initial site has exactly one blog post and one technical article in `content/posts.mjs`. Notes are intentionally empty. Edit the profile/layout in `scripts/build.mjs`, styling in `public/assets/style.css`, and writing in `content/posts.mjs`. The two initial pieces are newly prepared starter copy based on the supplied material, rather than previously published posts or reconstructed lab walkthroughs. Review them when updating the notebook.
+## Structure and growth
+
+- `src/components/`: reusable navigation, themes, writing cards, topic grid, and animated security doodle.
+- `src/pages/`: homepage, collections, long-form reader, profile, empty notes, and custom 404.
+- `src/styles/site.css`: shared design tokens and responsive dark/white styles.
+- `content/catalog.json`: post metadata and source references.
+- `content/*.html`: trusted, repository-owned article bodies.
+- `scripts/prepare-content.mjs`: validates and generates article sections, word counts, and reading times.
+- `scripts/build.mjs`: Vite client/server builds, prerendering, sitemap, and robots file.
+- `scripts/check.mjs`: validates routes, local assets, anchors, metadata, authors, and content minimums.
+
+React, React Router, and Motion provide component composition, navigation, and animation. Motion honours reduced-motion preferences. Fonts and artwork are hosted locally. There are no analytics or external rendering dependencies.
+
+The initial collection contains exactly **one blog and one technical article**, each over 4,000 body words. Notes are empty. To add writing, add a catalog record and a body file using unique `<section id="..."><h2>...</h2>...</section>` sections. The generator and prerenderer discover posts from the catalog. The current minimum-word and collection-count checks encode this initial brief; change those deliberately as the publication grows. Only trusted local content is rendered as HTML.
+
+This is a static publishing foundation. Accounts, a CMS, commerce, and persistent backend data can be introduced as separate services when those requirements exist.
+
+## Content provenance
 
 Sources checked on 3 October 2026:
 
@@ -32,10 +50,10 @@ Sources checked on 3 October 2026:
 - https://github.com/Satyam2003-dev: profile identity and photography links (Pexels and Unsplash). No project repositories have been invented or mapped to resume projects without evidence.
 - The technical article links to the official TryHackMe, GitHub Actions, and AWS IAM references it uses.
 
-Fonts are hosted locally under `public/assets/fonts/`, sourced from Google Fonts (IBM Plex Sans and JetBrains Mono). Their OFL licenses are included alongside the fonts. No external requests or analytics are required to render the site. A small local script switches between the dark and white themes and remembers the choice; all content remains readable without JavaScript.
+Fonts: IBM Plex Sans, JetBrains Mono, and Caveat; OFL licenses accompany the local font files. AI-generated landscape and cybersecurity covers are decorative artwork and do not depict Satyam. See [visual asset notes](docs/visual-assets.md).
 
 ## GitHub Pages / CI/CD
 
-Pull requests run a build and validation. Pushes to `main` build, validate, upload only `dist/`, and deploy through GitHub Pages. Actions are pinned to commit SHAs; deployment permissions are scoped to the deployment job. No personal tokens or cloud credentials are stored in the repository.
+Pull requests build and validate. Pushes to `main` build, validate, upload `dist/`, and deploy through GitHub Pages. Actions are pinned to commit SHAs; Pages and OIDC permissions are scoped to the deployment job. No personal tokens or cloud credentials are stored in the repository.
 
-An owner/admin must enable **Settings → Pages → Build and deployment → Source: GitHub Actions** once. Then rerun the deployment workflow if needed. Updates on `main` deploy automatically after checks pass.
+Repository: `Satyam2003-dev/satyam2003-dev.github.io`. Pages source: **GitHub Actions**. The root URL requires no repository base-path prefix. Every successful push to `main` deploys automatically.

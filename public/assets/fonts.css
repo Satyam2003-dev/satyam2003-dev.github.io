@@ -36,3 +36,5 @@
   font-display: swap;
   src: url(./fonts/font-4.ttf) format('truetype');
 }
+
+@font-face{font-family:'Caveat';font-style:normal;font-weight:500;font-display:swap;src:url('./fonts/caveat.ttf') format('truetype');}

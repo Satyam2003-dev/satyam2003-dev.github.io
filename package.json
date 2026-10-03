@@ -4,11 +4,24 @@
   "private": true,
   "type": "module",
   "author": "satyam2003-dev",
-  "engines": { "node": ">=22" },
+  "engines": {
+    "node": ">=22.12"
+  },
   "scripts": {
     "build": "node scripts/build.mjs",
     "check": "node scripts/check.mjs",
-    "dev": "node scripts/build.mjs && node scripts/serve.mjs",
-    "preview": "node scripts/serve.mjs"
+    "dev": "node scripts/prepare-content.mjs && vite",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "lucide-react": "^1.51.0",
+    "motion": "^14.0.0",
+    "react": "^19.3.0",
+    "react-dom": "^19.3.0",
+    "react-router-dom": "^7.18.4"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^6.1.1",
+    "vite": "^8.3.2"
   }
 }

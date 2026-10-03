@@ -6,3 +6,5 @@ reference/
 *.zip
 Satyam_Resume.pdf
 .DS_Store
+.build-ssr/
+src/generated/

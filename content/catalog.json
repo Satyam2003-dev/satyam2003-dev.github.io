@@ -1,0 +1,106 @@
+[
+  {
+    "type": "blog",
+    "slug": "from-labs-to-devsecops",
+    "title": "From security labs to DevSecOps: a notebook begins",
+    "description": "Connecting hands-on TryHackMe practice, cloud security, and the next chapter in AI & cybersecurity.",
+    "date": "2026-10-03",
+    "tags": [
+      "TryHackMe",
+      "DevSecOps"
+    ],
+    "sources": [
+      {
+        "title": "TryHackMe · cyberhitman",
+        "url": "https://tryhackme.com/p/cyberhitman"
+      },
+      {
+        "title": "LinkedIn · Satyam Kumar",
+        "url": "https://www.linkedin.com/in/iamsatyam1/"
+      },
+      {
+        "title": "GitHub · Satyam2003-dev",
+        "url": "https://github.com/Satyam2003-dev"
+      }
+    ],
+    "body": "learning-journal.html",
+    "author": "satyam2003-dev",
+    "category": "Learning journal"
+  },
+  {
+    "type": "article",
+    "slug": "secure-cicd-foundations",
+    "title": "A security checklist for a CI/CD pipeline",
+    "description": "Start with permissions, dependencies, credentials, and the boundary between untrusted code and deployment.",
+    "date": "2026-10-03",
+    "tags": [
+      "CI/CD",
+      "Cloud security"
+    ],
+    "sources": [
+      {
+        "title": "TryHackMe · Introduction to DevSecOps",
+        "url": "https://tryhackme.com/room/introductiontodevsecops"
+      },
+      {
+        "title": "TryHackMe · SSDLC",
+        "url": "https://tryhackme.com/room/securesdlc"
+      },
+      {
+        "title": "TryHackMe · Dependency Management",
+        "url": "https://tryhackme.com/room/dependencymanagement"
+      },
+      {
+        "title": "GitHub · Secure use reference",
+        "url": "https://docs.github.com/en/actions/reference/security/secure-use"
+      },
+      {
+        "title": "AWS · IAM security best practices",
+        "url": "https://docs.aws.amazon.com/IAM/latest/UserGuide/best-practices.html"
+      },
+      {
+        "title": "GitHub · Workflow syntax",
+        "url": "https://docs.github.com/en/actions/reference/workflows-and-actions/workflow-syntax"
+      },
+      {
+        "title": "GitHub · Workflow events",
+        "url": "https://docs.github.com/en/actions/reference/workflows-and-actions/events-that-trigger-workflows"
+      },
+      {
+        "title": "GitHub · Using secrets",
+        "url": "https://docs.github.com/en/actions/how-tos/write-workflows/choose-what-workflows-do/use-secrets"
+      },
+      {
+        "title": "GitHub · OIDC in AWS",
+        "url": "https://docs.github.com/en/actions/how-tos/secure-your-work/security-harden-deployments/oidc-in-aws"
+      },
+      {
+        "title": "GitHub · Deployment environments",
+        "url": "https://docs.github.com/en/actions/how-tos/deploy/configure-and-manage-deployments/manage-environments"
+      },
+      {
+        "title": "GitHub · Self-hosted runners",
+        "url": "https://docs.github.com/en/actions/concepts/runners/self-hosted-runners"
+      },
+      {
+        "title": "GitHub · Workflow artifacts",
+        "url": "https://docs.github.com/en/actions/tutorials/store-and-share-data"
+      },
+      {
+        "title": "GitHub · Dependency caching",
+        "url": "https://docs.github.com/en/actions/reference/workflows-and-actions/dependency-caching"
+      },
+      {
+        "title": "npm · Clean installs",
+        "url": "https://docs.npmjs.com/cli/v11/commands/npm-ci/"
+      },
+      {
+        "title": "SLSA · Build provenance",
+        "url": "https://slsa.dev/spec/v1.1/provenance"
+      }
+    ],
+    "body": "secure-delivery.html",
+    "author": "satyam2003-dev",
+    "category": "Secure delivery"
+  }
+]
